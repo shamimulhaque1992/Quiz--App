@@ -12,7 +12,7 @@ export default function Login() {
                 <Form className={`${classes.login}`}>
                     <TextInput type="text" placeholder="Enter Email" icons="alternate_email" />
                     <TextInput type="password" placeholder="Enter Password" icons="lock" />
-                    <Button>Sumit Now</Button>
+                    <Button><span>Sumit Now</span></Button>
                     <div className="info">Don't have an account? <a href="signup.html">Signup</a> instead.
                     </div>
                 </Form>
