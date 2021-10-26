@@ -6,6 +6,7 @@ import Button from "./Button";
 import Checkbox from "./Checkbox";
 import Form from "./Form";
 import TextInput from "./TextInput";
+
 export default function SignupForm() {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -52,7 +53,7 @@ export default function SignupForm() {
 
             <Checkbox text="I agree to the Terms &amp; Conditions" required value={agree} onChange={(e) => setAgree(e.target.value)} />
 
-            <Button disabled={loading} type="submit"><span>Sumit Now</span></Button>
+            <Button disabled={loading} type="submit"><span>Submit Now</span></Button>
 
             {error && <p className="error">{error}</p>}
             <div className="info">
