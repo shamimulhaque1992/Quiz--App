@@ -1,4 +1,3 @@
-
 /* nav component */
 .nav {
   display: flex;
@@ -41,8 +40,10 @@
 }
 
 .nav .brand img {
-  width: 32px;
+  width: 50px;
   margin-right: 10px;
+  border-radius: 50%;
+  border: 4px solid rgb(158, 221, 236);
 }
 
 @media only screen and (max-width: 600px) {
