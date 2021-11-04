@@ -1,4 +1,4 @@
-import { get, getDatabase, orderByKey, query, ref, startAt, limitToFirst } from "firebase/database";
+import { get, getDatabase, limitToFirst, orderByKey, query, ref, startAt } from "firebase/database";
 import { useEffect, useState } from "react";
 export default function useVideoList(page) {
     const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ export default function useVideoList(page) {
                 setLoading(false);
                 if (snapshot.exists()) {
                     setVideos((prevVideos) => {
-                        return [...prevVideos, ...Object.values(snapshot.val())];  
+                        return [...prevVideos, ...Object.values(snapshot.val())];
                     });
                 } else {
                     setHasMore(false);
@@ -34,7 +34,11 @@ export default function useVideoList(page) {
                 setError(true);
             }
         }
-        fatchVideos();
+
+
+        setTimeout(() => {
+            fatchVideos();
+        }, 2000);
 
     }, [page]);
 
