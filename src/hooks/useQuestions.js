@@ -7,7 +7,7 @@ export default function useQuestions(videoID) {
 
     useEffect(() => {
         //database operation
-        async function fatchQuestions() {
+        async function fetchQuestions() {
             const db = getDatabase();
             const quizRef = ref(db, "quiz/" + videoID + "/questions");
             const quizQuery = query(
@@ -34,7 +34,7 @@ export default function useQuestions(videoID) {
 
 
         setTimeout(() => {
-            fatchQuestions();
+            fetchQuestions();
         }, 2000);
 
     }, [videoID]);
