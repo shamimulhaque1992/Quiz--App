@@ -42,10 +42,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 5px solid rgb(255, 230, 86);
+  border-radius: 150px;
 }
 
 @media only screen and (max-width: 800px) {
   .badge {
     width: 100%;
+  }
+  .badge img {
+    border-radius: 50%;
   }
 }

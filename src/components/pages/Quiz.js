@@ -37,6 +37,10 @@ export default function Quiz() {
     const [qna, dispatch] = useReducer(reducer, initialState);
     const {currentUser} = useAuth();
     const history= useHistory();
+    const {location} = history;
+    const {state} = location;
+    const {videoTitle}=state;
+
     useEffect(() => {
         dispatch({
             type: "questions",
@@ -102,7 +106,7 @@ export default function Quiz() {
 
                     <Answers input options={qna[currentQuestion].options} handleChange={handleAnswerChange} />
                     <ProgressBar next={nextQuestion} prev={prevQuestion} progress={percentage} submit={submit} />
-                    <MiniPlayer id={id} title={qna[currentQuestion].title}/>
+                    <MiniPlayer id={id} title={videoTitle}/>
                 </>)}
         </>
     );
