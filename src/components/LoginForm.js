@@ -41,7 +41,7 @@ export default function LoginForm() {
             <TextInput type="password" placeholder="Enter Password" icons="lock" required value={password} onChange={(e) => setPassword(e.target.value)} />
             <Button disabled={loading} type="submit"><span>Sumit Now</span></Button>
             {error && <p className="error">{error}</p>}
-            <div className="info">Don't have an account? <Link to="signup.html">Signup</Link> instead.
+            <div className="info">Don't have an account? <Link to="/signup">Signup</Link> instead.
             </div>
         </Form>
     );
